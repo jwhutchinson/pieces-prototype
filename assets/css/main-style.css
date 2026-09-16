@@ -1,0 +1,468 @@
+@font-face {
+  font-family: 'kadwa';
+  src: url('/assets/fonts/kadwa/kadwa-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/kadwa/kadwa-regular-webfont.woff') format('woff'),
+       url('/assets/fonts/kadwa/kadwa-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kadwa';
+  src: url('/assets/fonts/kadwa/kadwa-bold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/kadwa/kadwa-bold-webfont.woff') format('woff'),
+       url('/assets/fonts/kadwa/kadwa-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-thin-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-thin-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-thin-webfont.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-light-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-light-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-regular-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-bold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-bold-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-black-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-black-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-black-webfont.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-thinitalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-thinitalic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-thinitalic-webfont.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-lightitalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-lightitalic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-lightitalic-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-italic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-italic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-italic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-mediumitalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-mediumitalic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-mediumitalic-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-bolditalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-bolditalic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-bolditalic-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('/assets/fonts/lato/lato-blackitalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/lato/lato-blackitalic-webfont.woff') format('woff'),
+       url('/assets/fonts/lato/lato-blackitalic-webfont.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root {
+  --main-font: lato, Arial, Helvetica, sans-serif;
+  --heading-font: kadwa, "Times New Roman", serif;
+
+  --emphasis-color: rgba(105, 77, 184, 1);
+  --highlighted-color: rgba(137, 107, 218, 0.4);
+  --main-text-colour: black;
+  --secondary-text-color: rgba(0, 0, 0, 0.5);
+
+  --button-border-color: rgba(0, 0, 0, 0.3);
+  --button-background-gradient: linear-gradient(to bottom, rgba(175, 94, 222, 1), rgba(137, 107, 218, 1));
+  --coloured-button-text: white;
+  --disabled-button-color: rgba(196, 196, 196, 1);
+
+  --aside-border: solid rgba(137, 107, 218, 1) 2px;
+  --aside-background: 
+    linear-gradient(to right, rgba(137, 107, 218, 0.0) 0.5%, rgba(137, 107, 218, 0.1) 0.5%, rgba(175, 94, 222, 0.1) 99.5%,
+    rgba(175, 94, 222, 0.0) 99.5%, rgba(175, 94, 222, 0.0) 100%);
+
+  --light-button-background: white;
+
+  --text-input-background: rgb(255, 255, 255, 0.4);
+  --text-input-border: rgba(0, 0, 0, 0.2);
+  --text-input-border-bottom: rgba(0, 0, 0, 0.8);
+  --text-input-border-bottom-disabled: rgba(0, 0, 0, 0.2);
+
+  --snippet-background: white;
+
+  --interact-box-background: white;
+  
+  --tap-box-tapped-background: rgba(105, 77, 184, 0.5);
+
+  --collapsible-button-background: white;
+  --collapsible-button-foreground: black;
+  --collapsible-button-shadow: black;
+
+  --collapsible-drawer-background: white;
+  --collapsible-drawer-foreground: black;
+  --collapsible-drawer-border: 2px solid black;
+
+  --standard-border: 2px solid black;
+  --standard-radius: 9px;
+
+  --likert-line-colour: rgba(0, 0, 0, 0.6);
+
+  --image-viewer-background: rgba(0, 0, 0, 0.6);
+
+  --snippet-mask:
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/15px 51% repeat-x,
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/15px 51% repeat-x;
+
+  --standard-shadow: 5px 5px 0 0 rgb(137 107 218);
+  --black-shadow: 5px 5px 0 0 black;
+
+  --standard-glass:
+    url(/assets/dot.svg),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.5) 45%, rgba(255, 255, 255, 0.65) 87.5%);
+  --faded-glass:
+    url(/assets/dot.svg),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.3) 45%, rgba(255, 255, 255, 0.45) 87.5%);
+  --glass-border: max(2px, 0.2vh) solid rgba(255, 255, 255, 1);
+}
+
+::-moz-selection {
+  background: var(--highlighted-color);
+}
+::selection {
+  background: var(--highlighted-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(253, 250, 255);
+  background-image: url("/assets/abstract-background-1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: var(--main-font);
+  color: var(--main-text-colour);
+  padding: var(--s0) 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--emphasis-color) !important;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+#main-site-logo {
+  max-height: 55px;
+  height: auto;
+}
+
+#full-site-center {
+  min-height: calc(100vh - calc(var(--s0) * 2));
+  margin-bottom: 0;
+  display: grid;
+}
+
+#center-glass {
+  padding-bottom: var(--s2);
+}
+
+#full-image-viewer {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: var(--image-viewer-background);
+  cursor: pointer;
+}
+
+#full-size-image {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 95%;
+  max-height: 95%;
+  margin: 0 auto;
+}
+
+#close-image-viewer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  padding: 0.5rem 0.6rem;
+  color: white;
+  z-index: 11;
+  background-color: var(--image-viewer-background);
+  border-radius: var(--s-1);
+}
+
+#empty-new-notice {
+  display: none;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.home-icon {
+  height: 30px;
+}
+
+.help-icon {
+  height: 33px;
+  display: inline;
+  align-items: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-link {
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav-link-text {
+  padding-left: 0.42rem;
+  margin-top: 0.15rem;
+}
+
+.site-header {
+  padding: var(--s2) var(--s2) var(--s-3) var(--s2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-main {
+  padding: 0 var(--s2);
+  margin: 0;
+  flex: 1;
+}
+
+.site-footer {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+  padding: 3em 1em 1em;
+}
+.site-footer a {
+  font-weight: 700;
+  color: currentcolor;
+}
+
+.nav {
+  display: inline-block;
+}
+.nav ul {
+  display: flex;
+  gap: var(--s1);
+  margin: 0;
+  padding-left: var(--s-1);
+  padding-right: 0;
+}
+
+.glass-background {
+  height: 100%;
+  background: var(--standard-glass);
+  backdrop-filter: blur(10px);
+  border: var(--glass-border);
+  border-radius: 1.6vh;
+}
+
+.white-button, .coloured-button {
+  height: var(--s3);
+  width: var(--s5);
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: var(--standard-border);
+  box-shadow: var(--standard-shadow);
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.white-button {
+  color: black;
+  background-color: white;
+}
+
+.coloured-button {
+  background-image: var(--button-background-gradient);
+  color: var(--coloured-button-text);
+}
+.coloured-button:disabled, .white-button:disabled {
+  background-image: none;
+  background-color: var(--disabled-button-color);
+  border: none;
+  cursor: default !important;
+  box-shadow: none;
+}
+
+.rectangular-button {
+  border-radius: var(--s-2);
+}
+
+.circular-button {
+  border-radius: 100vw;
+}
+
+.text-input-label {
+  position: relative;
+  font-weight: bold;
+}
+
+.text-input {
+  width: 100%;
+  padding: var(--s-1) !important;
+  background: var(--text-input-background) !important;
+  border: 2px solid var(--text-input-border) !important;
+  border-bottom: 2px solid var(--text-input-border-bottom) !important;
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  border-radius: var(--standard-radius) var(--standard-radius) 0 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.text-input:disabled {
+  border-bottom: 2px solid var(--text-input-border-bottom-disabled) !important;
+  border-radius: var(--standard-radius);
+}
+
+.aside {
+  padding: 16px;
+  border-top: var(--aside-border);
+  border-bottom: var(--aside-border);
+  background-image: var(--aside-background);
+}
+
+@media screen and (max-width: 620px) and (min-width: 420px) {
+  .site-header {
+    padding: var(--s1) var(--s1) var(--s-4) var(--s1);
+  }
+
+  .site-main {
+    padding: 0 var(--s1);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .site-header {
+    padding: var(--s1) var(--s0) var(--s-4) var(--s0);
+  }
+
+  .site-main {
+    padding: 0 var(--s0);
+  }
+
+  .nav-link-text {
+    display: none;
+  }
+  .nav ul {
+    width: 100%;
+    gap: var(--s1);
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 370px) {
+    .nav ul {
+    width: 100%;
+    gap: var(--s0);
+    justify-content: space-between;
+  }
+}

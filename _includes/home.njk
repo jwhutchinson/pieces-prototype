@@ -1,0 +1,60 @@
+---
+layout: logged-in.njk
+---
+
+<link rel="stylesheet" href="/assets/css/home-style.css" />
+
+<main class="site-main" id="home">
+  <h1>Live Pieces</h1>
+  <h2>New</h2>
+    <p class="header-subtitle">Anonymously share what you think:</p>
+    <grid-layout id="live-snippets-holder" min="14rem">
+      {% for snippet in collections.snippets | checkSnippetPublishable | sortSnippetByDate %}
+        <a id="{{ snippet.data.snippetID }}" class="live-snippet-box" href="{{ snippet.url }}">
+          <div class="snippet-box-upper">
+            <span class="snippet-box-header">{{ snippet.data.snippetTitle }}</span>
+            <br />
+            <span class="topic-text">{{ snippet.data.topicTitle }} ({{ snippet.data.snippetNumber }})</span>
+          </div>
+          <img id="live-{{ snippet.data.snippetID }}" class="live-animation" src="/assets/mini-live-animation.gif" alt="Animation showing snippet is live" />
+          <span id="date-{{ snippet.data.snippetID }}" class="date-text">Available Until: {{ snippet.data.dateRemove | availableTime }}</span>
+          <input id="date-publish-{{ snippet.data.snippetID }}" value="{{ snippet.data.datePublish }}" hidden />
+          <input id="date-remove-{{ snippet.data.snippetID }}" value="{{ snippet.data.dateRemove }}" hidden />
+        </a>
+      {% endfor %}
+    </grid-layout>
+    <p id="empty-new-notice" class="aside">Please <span class="bold">come back soon</span> when you're notified or read the <a href="/about">About Page</a> for more info</p>
+    <div id="completed-subsection">
+      <br />
+      <h2>Recently Responded</h2>
+      <p id="completed-description" class="header-subtitle">Come back for the next part soon:</p>
+      <grid-layout id="completed-snippets-holder" min="14rem">
+        {% for snippet in collections.snippets | checkSnippetPublishable | sortSnippetByDate %}
+          <a id="completed-{{ snippet.data.snippetID }}" class="snippet-box" href="{{ snippet.url }}">
+            <div class="snippet-box-upper">
+              <span class="snippet-box-header">{{ snippet.data.snippetTitle }}</span>
+              <br />
+              <span class="topic-text">{{ snippet.data.topicTitle }} ({{ snippet.data.snippetNumber }})</span>
+            </div>
+            <br />
+            <span id="date-{{ snippet.data.snippetID }}" class="answered-text">Answered &#10003</span>
+          </a>
+        {% endfor %}
+      </grid-layout>
+    </div>
+  <h1>Your Archived Pieces</h1>
+    <p class="header-subtitles">Past articles you've contributed to:</p>
+    <grid-layout id="topics-holder" min="14rem">
+      {% for topic in collections.topics | checkArticlePublishable | sortArticleByDate %}
+        <a id="{{ topic.data.articleID }}" class="topic-box" href="{{ topic.url }}">
+          <span class="topic-box-header">{{ topic.data.title }}</span>
+          <br />
+          <span class="date-text">Finished: {{ topic.data.dateUpdated | friendlyDate }}</span>
+          <input id="topic-date-publish-{{ topic.data.articleID }}" value="{{ topic.data.dateUpdated }}" hidden />
+        </a>
+      {% endfor %}
+    </grid-layout>
+    <p id="articles-notice" class="empty-home-notice aside" hidden>When articles on topics you've contributed to (above) are completed, they will appear here!</p>
+</main>
+
+<script type="module" src="/assets/js/home.js"></script>

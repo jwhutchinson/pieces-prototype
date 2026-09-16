@@ -1,0 +1,27 @@
+---
+layout: html.njk
+---
+<header class="site-header">
+  <a tabindex="0" class="site-header-brand" onclick="window.location='/'+window.location.search;">
+    <img id="main-site-logo" src="/assets/pieces-logo.png" />
+  </a>
+  <nav class="nav">
+    <ul>
+      <li>
+        <a class="help-link nav-link" tabindex="0" onclick="window.location='/about'+window.location.search;">
+          <img class="help-icon" src="/assets/help-icon.svg" />
+          <span class="nav-link-text">Help</span>
+        </a>
+      </li>
+      <li>
+        <a class="home-link nav-link" tabindex="0" onclick="window.location='/'+window.location.search;">
+          <img class="home-icon" src="/assets/home-icon.svg" />
+          <span class="nav-link-text">Home</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+{{ content | safe }}
+
+<script type="module" src="/assets/js/logged-in.js"></script>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- @openlab/alembic inject-css -->
+    <link rel="stylesheet" href="/assets/css/main-style.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/temp-style.css" /> -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="full-image-viewer">
+      <img src="" id="full-size-image" />
+      <div id="close-image-viewer">Close X</div>
+    </div>
+    <center-layout gutters="var(--s0)" max="900px" id="full-site-center">
+      <div id="center-glass" class="glass-background">
+        <div class="site-content">
+          {{ content | safe }}
+        </div>
+      </div>
+    </center-layout>
+    <!-- @openlab/alembic inject-js -->
+    <script type="module" src="/assets/js/general.js"></script>
+  </body>
+</html>

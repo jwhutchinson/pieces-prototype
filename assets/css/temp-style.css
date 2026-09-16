@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'flow-block';
+  src: url('/assets/fonts/FlowBlock-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.topic-text, .date-text, .snippet-box-header, .topic-box-header, #snippet-holder, #snippet-label, #topic-title {
+  font-family: flow-block, Arial, Helvetica, sans-serif !important;
+}
+
+#article-main, h1 {
+  font-family: flow-block, Arial, Helvetica, sans-serif !important;
+}
+
+/* * {
+  font-family: flow-block, Arial, Helvetica, sans-serif !important;
+} */

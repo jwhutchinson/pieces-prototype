@@ -1,0 +1,101 @@
+---
+layout: logged-in.njk
+---
+
+<link rel="stylesheet" href="/assets/css/opinion-style.css" />
+
+<main class="site-main" id="opinion-main">
+  <div id="static-holder">
+    {{ content | safe }}
+  </div>
+  <div id="dynamic-holder">
+    <div id="waiting-holder">
+      <div id="inner-waiting-holder">
+        <video id="waiting-video" muted playsinline loop>
+          <source src="/assets/waiting_animation.mp4">
+        </video>
+        <p id="waiting-message">Pause to think how you feel about it</p> 
+      </div>
+    </div>
+
+    <p id="answered-message" class="aside">Answered!</p>
+    <div id="input-holder">
+      <form id="opinion-form" disabled>
+        <label class="text-input-label" for="response-field" class="field">
+          <br />
+          How do you feel about this?
+        </label>
+        <textarea id="response-field" class="text-input" rows="5" maxlength="300" name="message" placeholder="Type here..." disabled></textarea>
+        <div id="character-count">
+          <span id="current-count">0</span>
+          <span id="maximum-count">/ 300</span>
+        </div>
+        <div id="text-button-holder">
+          <input id="submit-text-button" type="submit" name="Submit" class="coloured-button rectangular-button" value="Enter" disabled/>
+        </div>
+        <input id="topic-name" type="hidden" value="{{ topicTitle }}"/>
+        <input id="snippet-name" type="hidden" value="{{ snippetTitle }}"/>
+        <input id="snippet-id" type="hidden" value="{{ snippetID }}"/>
+        <input id="response-type" type="hidden" value="{{ responseType }}"/>
+        <input id="read-time" type="hidden" value="{{ readTime }}"/>
+      </form>
+      <div id="likert-holder">
+        <p id="likert-prompt">How do you feel about this?</p>
+        <form action="" id="likert-form">
+          <ul class="likert">
+            <li>
+              <input id="strong-agree" type="radio" name="likert" value="very_happy"/>
+              <label class="likert-label" for="strong-agree">Very Happy</label>
+            </li>
+            <li>
+              <input id="agree" type="radio" name="likert" value="happy"/>
+              <label class="likert-label" for="agree">Happy</label>
+            </li>
+            <li>
+              <input id="neutral" type="radio" name="likert" value="neutral"/>
+              <label class="likert-label" for="neutral">Neutral</label>
+            </li>
+            <li>
+              <input id="disagree" type="radio" name="likert" value="unhappy"/>
+              <label class="likert-label" for="disagree">Unhappy</label>
+            </li>
+            <li>
+              <input id="strong-disagree" type="radio" name="likert" value="very_unhappy"/>
+              <label class="likert-label" for="strong-disagree">Very Unhappy</label>
+            </li>
+          </ul>
+          <input id="submit-likert-button" type="submit" name="Submit" class="coloured-button rectangular-button" value="Enter" disabled/>
+        </form>
+      </div>
+      <div id="shake-holder">
+        <p id="shake-prompt">Tap the button and then <span class="italic">shake</span> your phone for 10 seconds to show how you feel</p>
+        <div id="shake-prompt-holder">
+          <button id="shake-button" class="coloured-button rectangular-button">Start</button>
+          <p id="go-shake-prompt">SHAKE!</p>
+        </div>
+      </div>
+      <div id="tap-holder">
+        <p id="tap-prompt">Tap in this space for 10 seconds to show how you feel:</p>
+        <div id="tap-box">
+          <input id="tap-button" type="button" class="coloured-button rectangular-button" value="Start"/>
+          <p id="go-tap-prompt">TAP!</p>
+        </div>
+        <p id="stop-tap-prompt">DONE!</p>
+      </div>
+      <p id="mic-answered-message"><span class="bold">Recording Length: </span><span id="answered-seconds">1</span> seconds</p>
+      <div id="mic-holder">
+        <p id="mic-prompt">Tap Record and talk for up to 60 seconds on how you feel about this</p>
+        <div id="mic-buttons-holder">
+          <div class="button-label-pair"><button id="pause-button" class="coloured-button circular-button"><img src="/assets/pause-icon.svg" alt="Pause Icon" id="pause-icon"></button><span id="pause-label" class="mic-mini-label">Pause</span></div>
+          <button id="record-button" class="white-button circular-button"><img src="/assets/mic-icon.svg" alt="Microphone Icon" id="record-icon">Record</button>
+          <div class="button-label-pair"><button id="delete-button" class="white-button circular-button" disabled><img src="/assets/delete-icon.svg" alt="Delete Icon" id="delete-icon"></button><span id="delete-label" class="mic-mini-label">Delete</span></div>
+        </div>
+        <p id="seconds-message"><span id="elapsed-message">0</span>/60 Seconds</p>
+        <button id="submit-recording" class="coloured-button rectangular-button" disabled>Submit</button>
+      </div>
+    </div>
+    <a id="go-home-link" href="/"><img class="home-icon" src="/assets/home-icon.svg" /><p id="go-home-message"> Go Home</p></a>
+  </div>
+</main>
+
+<script type="module" src="/assets/js/opinion.js"></script>

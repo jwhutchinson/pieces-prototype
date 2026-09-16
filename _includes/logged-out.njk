@@ -1,0 +1,14 @@
+---
+layout: html.njk
+---
+<header class="site-header">
+  <a tabindex="0" id="not-mobile-logo" class="site-header-brand" onclick="window.location='/'+window.location.search;">
+    <img id="main-site-logo" src="/assets/pieces-logo.png" />
+  </a>
+</header>
+
+<link rel="stylesheet" href="/assets/css/not-mobile-style.css" />
+
+<main class="site-main">
+  {{ content | safe }}
+</main>

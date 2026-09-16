@@ -1,0 +1,125 @@
+h1 {
+  margin-top: var(--s2);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.header-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.site-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topic-text, .date-text, .responded-text {
+  font-size: 0.8rem;
+  line-height: 14px;
+}
+
+.topic-text, .date-text {
+  z-index: 2;
+  color: var(--main-text-colour) !important;
+}
+
+.topic-text {
+  font-style: italic;
+}
+
+.date-text {
+  max-width: calc(100% - 2rem);
+}
+
+.snippet-box-upper {
+  position: relative;
+}
+
+.answered-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0 0.5rem 0.5rem 0;
+  font-size: 0.8rem;
+}
+
+.snippet-box, .live-snippet-box, .topic-box {
+  display: none;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  min-height: 7rem;
+  padding: 12px 16px 16px 16px;
+  border: var(--standard-border);
+  background: var(--light-button-background);
+  border-radius: var(--standard-radius);
+  box-shadow: var(--standard-shadow);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.snippet-box-header, .topic-box-header {
+  font-weight: bold;
+}
+
+.empty-home-notice {
+  margin: 1.8rem 0 0.7rem 0;
+  text-align: center;
+}
+
+.glass-background {
+  background: var(--faded-glass) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.live-animation {
+  position: absolute;
+  bottom: 9px;
+  right: 9px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+.home-link {
+  pointer-events: none;
+  cursor: default;
+  filter: brightness(0%);
+}
+
+#empty-new-notice {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+#completed-snippets-holder {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#live-snippets-holder {
+  margin-bottom: 1rem;
+}
+
+#topics-holder {
+  margin-top: 0.5rem;
+}
+
+#completed-subsection {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    margin-top: var(--s2);
+  }
+}
